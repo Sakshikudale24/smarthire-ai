@@ -42,7 +42,7 @@ const [skills, setSkills] = useState([]);
   const fetchHistory = async () => {
   try {
     const response = await axios.get(
-      "http://localhost:5000/analysis-history"
+      "https://smarthire-ai-wkgt.onrender.com/analysis-history"
     );
 
     setHistory(response.data);
@@ -55,7 +55,7 @@ const fetchStats = async () => {
   try {
 
     const response = await axios.get(
-      "http://localhost:5000/dashboard-stats"
+      "https://smarthire-ai-wkgt.onrender.com/dashboard-stats"
     );
 
     setStats(response.data);
@@ -68,7 +68,7 @@ const fetchStats = async () => {
 const fetchATSDistribution = async () => {
   try {
     const response = await axios.get(
-      "http://localhost:5000/ats-distribution"
+      "https://smarthire-ai-wkgt.onrender.com/ats-distribution"
     );
 
     setAtsData(response.data);
@@ -82,7 +82,7 @@ const fetchCandidates = async () => {
   try {
 
     const response = await axios.get(
-      "http://localhost:5000/candidate-shortlist"
+      "https://smarthire-ai-wkgt.onrender.com/candidate-shortlist"
     );
 
     setCandidates(response.data);
@@ -96,7 +96,7 @@ const fetchSignals = async () => {
   try {
 
     const response = await axios.get(
-      "http://localhost:5000/ai-signals"
+      "https://smarthire-ai-wkgt.onrender.com/ai-signals"
     );
 
     setSignals(response.data);
@@ -109,7 +109,7 @@ const fetchSkills = async () => {
   try {
 
     const response = await axios.get(
-      "http://localhost:5000/top-skills"
+      "https://smarthire-ai-wkgt.onrender.com/top-skills"
     );
 
     setSkills(response.data);

@@ -14,7 +14,7 @@ function Register() {
 
     try {
       await axios.post(
-        "http://localhost:5000/register",
+        "https://smarthire-ai-wkgt.onrender.com/register",
         {
           name,
           email,

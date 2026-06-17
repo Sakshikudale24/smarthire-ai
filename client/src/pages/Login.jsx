@@ -12,7 +12,7 @@ function Login() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/login",
+        "https://smarthire-ai-wkgt.onrender.com/login",
         {
           email,
           password,

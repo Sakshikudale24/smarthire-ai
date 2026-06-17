@@ -48,12 +48,12 @@ try {
   formData.append("resume", file);
 
   const uploadResponse = await axios.post(
-    "http://localhost:5000/upload-resume",
+    "https://smarthire-ai-wkgt.onrender.com/upload-resume",
     formData
   );
 
   const atsResponse = await axios.post(
-    "http://localhost:5000/analyze-ats",
+    "https://smarthire-ai-wkgt.onrender.com/analyze-ats",
     {
       filePath: uploadResponse.data.filePath,
       jobDescription,
@@ -105,7 +105,7 @@ const downloadPDF = () => {
 const generateQuestions = async () => {
 try {
 const response = await axios.post(
-"http://localhost:5000/generate-questions",
+"https://smarthire-ai-wkgt.onrender.com/generate-questions",
 {
 analysis: atsResult,
 }
