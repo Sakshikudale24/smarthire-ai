@@ -6,6 +6,18 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
+
+const fs = require('fs');
+const path = require('path');
+
+// Automatically create 'uploads' folder if it doesn't exist
+const uploadDir = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadDir)) {
+    fs.mkdirSync(uploadDir, { recursive: true });
+    console.log('Created missing uploads directory');
+}
+
+
 console.log("API KEY:", process.env.GEMINI_API_KEY);
 
 const fs = require("fs");
