@@ -47,17 +47,21 @@ app.get("/", (req, res) => {
   res.send("SmartHire AI Backend Running");
 });
 
+const path = require('path');
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "uploads/");
+    // This creates an absolute path that Render can always find
+    const uploadPath = path.join(__dirname, 'uploads'); 
+    cb(null, uploadPath);
   },
-
   filename: (req, file, cb) => {
     cb(null, Date.now() + "-" + file.originalname);
   },
 });
 
 const upload = multer({ storage });
+
 
 app.post("/register", async (req, res) => {
   try {
